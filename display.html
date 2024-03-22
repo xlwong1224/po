@@ -1,0 +1,41 @@
+<!DCOTYPE html>
+<html>
+<head>
+<title> Display </title>
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/display">Option 1</a></li>
+            <li><a href="/type">Option 2</a></li>
+            <li><a href="/totalbase">Option 3</a></li>
+            <li><a href="/minstat">Option 4</a></li>
+			<li><a href="/legendary">Option 5</a></li>
+			<li><a href="/insert">Option 6</a></li>
+			<li><a href="/HP">Option 7</a></li>
+        </ul>
+</nav>
+    <h1>Display pokemon with their types and statistics</h1>
+    <p>Number of pokemon to be display: </p>
+    <div>
+        <form method="post" action="/display">
+            <label for="n"></label>
+            <input type="number" id="n" name="num" min="1">
+            <br>
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </div>
+    <table>
+        
+        <!-- display pokemon -->
+        {% for i in display %}
+        <tr>
+            {% for row in i %}
+                <td>{{ row }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

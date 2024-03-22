@@ -1,0 +1,79 @@
+<head>
+<style>
+	body{background-image:linear-gradient(white,pink);}
+</style>
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/display">Option 1</a></li>
+            <li><a href="/type">Option 2</a></li>
+            <li><a href="/totalbase">Option 3</a></li>
+            <li><a href="/minstat">Option 4</a></li>
+			<li><a href="/legendary">Option 5</a></li>
+			<li><a href="/insert">Option 6</a></li>
+			<li><a href="/HP">Option 7</a></li>
+        </ul>
+</nav>
+    <h1>Insert data</h1>
+    <p>Enter the following data about your new pokemon!</p>
+    <div>
+        <form method="post" action="/insert">
+       
+			<label for="uno"></label>
+            <input type="text" id="uno" name="uno" placeholder="number">
+            <br>
+			
+			<label for="uname"></label>
+            <input type="text" id="uname" name="uname" placeholder="name of pokemon">
+            <br>
+			<label for="utype1"></label>
+            <input type="text" id="utype1" name="utype1" placeholder="type 1">
+            <br>
+			<label for="utype2"></label>
+            <input type="text" id="utype2" name="utype2" placeholder="type 2">
+            <br>
+			<label for="utotal"></label>
+            <input type="text" id="utotal" name="utotal" placeholder="total base stat">
+            <br>
+			<label for="uhp"></label>
+            <input type="text" id="uhp" name="uhp" placeholder="hp">
+            <br>
+			<label for="uattack"></label>
+            <input type="text" id="uattack" name="uattack" placeholder="attack">
+            <br>
+			<label for="udefense"></label>
+            <input type="text" id="udefense" name="udefense" placeholder="defense">
+            <br>
+			<label for="usp_atk"></label>
+            <input type="text" id="usp_atk" name="usp_atk" placeholder="sp_atk">
+            <br>
+			<label for="usp_def"></label>
+            <input type="text" id="usp_def" name="usp_def" placeholder="sp_def">
+            <br>
+			<label for="uspeed"></label>
+            <input type="text" id="uspeed" name="uspeed" placeholder="speed">
+            <br>
+			<label for="ugeneration"></label>
+            <input type="text" id="ugeneration" name="ugeneration" placeholder="generation">
+            <br>
+			<label for="ulegendary"></label>
+            <input type="text" id="ulegendary" name="ulegendary" placeholder="legendary(TRUE/FALSE)">
+            <br>
+		
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </div>
+    <table>
+        
+        <!-- display pokemon -->
+        {% for i in display %}
+        <tr>
+            {% for row in i %}
+                <td>{{ row }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>

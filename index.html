@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Pokedex 3</title>
+</head>
+
+<body>
+<h1>Welcome to pokedex3</h1>
+<p>
+Have fun with Pokedex!!
+<ol>
+	<li>Display selected number of Pokemons with their types and statistics</li>
+	<li>Display the first Pokemon of a Type of the trainer’s choice</li>
+	<li>Display all Pokemons with Total Base stat of the trainer’s choice</li>
+	<li>Display all Pokemons with a minimum set of stats</li>
+	<li>Display all legendary Pokemons of Types of the trainer’s choice</li>
+	<li>Insert data</li>
+	<li>Display HP, Count of each type1</li>
+</ol>
+</p>
+<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/display">Option 1</a></li>
+            <li><a href="/type">Option 2</a></li>
+            <li><a href="/totalbase">Option 3</a></li>
+            <li><a href="/minstat">Option 4</a></li>
+			<li><a href="/legendary">Option 5</a></li>
+			<li><a href="/insert">Option 6</a></li>
+			<li><a href="/HP">Option 7</a></li>
+        </ul>
+    </nav>
+<table>
+<p> HI </p>
+{% for row in lst %}
+<tr>
+	<td>{{ row }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+
+</html>

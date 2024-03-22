@@ -1,0 +1,30 @@
+<head>
+<style>
+	body{background-image:linear-gradient(white,pink);}
+</style>
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/display">Option 1</a></li>
+            <li><a href="/type">Option 2</a></li>
+            <li><a href="/totalbase">Option 3</a></li>
+            <li><a href="/minstat">Option 4</a></li>
+			<li><a href="/legendary">Option 5</a></li>
+			<li><a href="/insert">Option 6</a></li>
+			<li><a href="/HP">Option 7</a></li>
+        </ul>
+</nav>
+    <h1>Display the first pokemon of a type of your choice</h1>
+    <p>Type of pokemon to display?</p>
+    <div>
+        <form method="post" action="/type">
+            <label for="t"></label>
+            <input type="text" id="t" name="type1">
+            <br>
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </div>
+	<p>{{  display  }}</p>
+</body>
