@@ -32,7 +32,7 @@ data = csv.reader(file)
 next(data) #remove header
 
 statement = "INSERT INTO Pokemon(no,name,type_1,type_2,total,hp,attack,defense,sp_atk,sp_def,speed,generation,legendary) values(?,?,?,?,?,?,?,?,?,?,?,?,?)"
-#c.executemany(statement,data)
+c.executemany(statement,data)
 
 conn.commit()
 
